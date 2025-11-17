@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2.Vki"
+             Title="Vki"
+             >
+    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="Start">
+
+        <Label 
+            Text="Vki = kg/(boy*boy)"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            />
+
+        <Label 
+            Text="Kilonuzu Giriniz"
+            FontSize="16" />
+
+      
+            <Slider 
+                x:Name="KiloSec"
+                Minimum="40"
+                Maximum="200"
+                Value="70"
+                ValueChanged="OnSliderValueChanged" />
+            <Label 
+                x:Name="Kilosu"
+                Text="70.0"
+                FontSize="16"
+                VerticalOptions="Center" />
+      
+
+        <Label 
+            Text="Boyunuzu Giriniz"
+            FontSize="16" />
+
+       
+            <Slider 
+                x:Name="BoySec"
+                Minimum="100"
+                Maximum="250"
+                Value="175"
+                ValueChanged="OnSliderValueChanged" />
+        
+            <Label 
+                x:Name="Boyu"
+                Text="175.0"
+                FontSize="16"
+                VerticalOptions="Center" />
+       
+
+        <Label 
+            Text="Vücut Kitle Endeksiniz"     />
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Margin="10">
+            <Label 
+                x:Name="Sonuc"
+                Text="VKI: 23"
+                TextColor="#00FFFF" FontSize="22" />
+
+            <Label 
+                x:Name="Obezlik"
+                Text="Normal"
+                TextColor="#00FFFF"
+                FontSize="22"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

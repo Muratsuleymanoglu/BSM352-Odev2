@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2.KrediHesaplama"
+             Title="KrediHesaplama">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+
+            <HorizontalStackLayout HorizontalOptions="Center" Padding="20">
+                
+                <Picker x:Name="KrediTuru" Title="Kredi Türü">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>İhtiyaç Kredisi</x:String>
+                            <x:String>Taşıt Kredisi</x:String>
+                            <x:String>Konut Kredisi</x:String>
+                            <x:String>Ticari Kredisi</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
+
+            <Label Text="Kredi Tutarı(TL)"></Label>
+            <Entry 
+                x:Name="Tutar"
+                Placeholder="Yatıracağınız Tutarı Giriniz"
+                Keyboard="Numeric"
+                ></Entry>
+            
+            <Label Text="Yıllık Faiz Oranı (%)" />
+            <Entry 
+                x:Name="FaizOran" 
+                   Keyboard="Numeric" 
+                Placeholder="Faiz Oranı Giriniz" />
+
+            
+            <Label Text="Vade (Ay)" />
+            
+            <StackLayout >
+                <Slider x:Name="Vade" 
+                        Minimum="1" 
+                        Maximum="120" 
+                        Value="36"
+                        />
+            
+            <Label Text="{Binding Source={x:Reference Vade}, Path=Value, StringFormat='{0:F0}'}" 
+                       VerticalOptions="Center"
+                        />
+            </StackLayout>
+
+
+            <Button Text="Hesapla" Clicked="Button_Clicked" Margin="0,20,0,0" />
+
+            <Label x:Name="AylikTaksit" FontSize="Medium" FontAttributes="Bold" />
+            <Label x:Name="ToplamOdenecekTutar" FontSize="Medium" />
+            <Label x:Name="hataLabel" FontSize="Medium" TextColor="Red" />
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2.RenkSecme"
+             Title="Renk Seçimi">
+    <Grid RowDefinitions="Auto, *">
+
+        <VerticalStackLayout Grid.Row="0" Spacing="10" Padding="20">
+
+            <Label 
+                Text="Renk Seçici"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label Text="Kırmızı(Red) Ton:" TextColor="Red"/>
+            <Grid ColumnDefinitions="*, 50" ColumnSpacing="10">
+                <Slider x:Name="Kirmizi"
+                        Grid.Column="0"
+                        Minimum="0" Maximum="255"
+                        ValueChanged="OnColorChanged" />
+                <Label Text="{Binding Source={x:Reference RedSlider}, Path=Value, StringFormat='{0:N0}'}"
+                       Grid.Column="1"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <Label Text="Yeşil(Green) Ton:" TextColor="Green"/>
+            <Grid ColumnDefinitions="*, 50" ColumnSpacing="10">
+                <Slider x:Name="Yesil"
+                        Grid.Column="0"
+                        Minimum="0" Maximum="255"
+                        ValueChanged="OnColorChanged" />
+                <Label Text="{Binding Source={x:Reference GreenSlider}, Path=Value, StringFormat='{0:N0}'}"
+                       Grid.Column="1"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <Label Text="Mavi(Blue) Ton:" TextColor="Blue"/>
+            <Grid ColumnDefinitions="*, 50" ColumnSpacing="10">
+                <Slider x:Name="Mavi"
+                        Grid.Column="0"
+                        Minimum="0" Maximum="255"
+                        ValueChanged="OnColorChanged" />
+                <Label Text="{Binding Source={x:Reference BlueSlider}, Path=Value, StringFormat='{0:N0}'}"
+                       Grid.Column="1"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <Frame Padding="5" Margin="0,10,0,0">
+                <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
+                    <Label x:Name="HexLabel"
+                           Grid.Column="0"
+                           Text="#FFFFFF"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+
+                    <Button x:Name="Kopyalama"
+                            Text="Kopyala"
+                            Grid.Column="1"
+                            Clicked="KopyalaButton_Clicked" />
+                </Grid>
+            </Frame>
+
+            <Button x:Name="RandomButton"
+                    Text="Rastgele Renk"
+                    Clicked="RastgeleButton_Clicked" />
+
+        </VerticalStackLayout>
+
+        <BoxView x:Name="ColorBox"
+                 Grid.Row="1" />
+
+    </Grid>
+</ContentPage>

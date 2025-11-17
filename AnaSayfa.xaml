@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2.AnaSayfa"
+             Title="Ana Sayfa">
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center"
+        >
+
+
+        <Label
+       Text="Hoşgeldiniz "
+       FontSize="32"
+       HorizontalOptions="Center" />
+
+
+        <Image 
+            Source ="muro.jpg"
+            HeightRequest="300"
+            WidthRequest="300"
+            HorizontalOptions="Center"
+            
+        />
+
+
+
+        <Label
+           Text="Murat Süleymanoğlu "
+           FontSize="32"
+           HorizontalOptions="Center" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

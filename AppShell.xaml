@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Odev2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Odev2"
+    Title="Odev2">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout Padding="20" BackgroundColor="{StaticResource Primary}">
+            <Label Text="Hesaplama Araçları" 
+                   TextColor="White" 
+                   FontSize="18" 
+                   FontAttributes="Bold" />
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Ana Sayfa" >
+        <ShellContent
+            Title="Ana Sayfa"
+            ContentTemplate="{DataTemplate local:AnaSayfa}"
+            Route="AnaSayfa" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kredi Hesaplama" >
+        <ShellContent
+            Title="Kredi Hesaplama"
+            ContentTemplate="{DataTemplate local:KrediHesaplama}"
+            Route="KrediHesaplama" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="VKi Hesaplama" >
+        <ShellContent
+            Title="VKE Hesaplama"
+            ContentTemplate="{DataTemplate local:Vki}"
+            Route="Vki" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Renk Seçici" >
+        <ShellContent
+            Title="Renk Seçici"
+            ContentTemplate="{DataTemplate local:RenkSecme}"
+            Route="RenkSecme" />
+    </FlyoutItem>
+
+</Shell>
