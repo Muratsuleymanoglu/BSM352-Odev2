@@ -44,6 +44,8 @@ Kredi tutarı ve **aylık** faiz oranı için `Entry` (giriş) alanları.
 * .NET MAUI
 * C#
 * XAML
+* 
+---
 
 ##Videolu Anlatım Linki
 
