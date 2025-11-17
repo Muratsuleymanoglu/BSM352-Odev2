@@ -1,7 +1,5 @@
 # BSM352 Görsel Programlama Ödev 2
 
-[cite_start]Bu proje, Bartın Üniversitesi Bilgisayar Mühendisliği Bölümü **BSM352 Görsel Programlama** dersi [cite: 14, 15] kapsamında geliştirilmiş bir .NET MAUI uygulamasıdır.
-
 ## 👤 Öğrenci Bilgileri
 
 * **Ad Soyad:** `Murat Süleymanoğlu`
