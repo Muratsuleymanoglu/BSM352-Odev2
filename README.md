@@ -47,6 +47,6 @@ Kredi tutarı ve **aylık** faiz oranı için `Entry` (giriş) alanları.
 * 
 ---
 
-##Videolu Anlatım Linki
+## Videolu Anlatım Linki
 
 **https://youtu.be/FnHGU6CNInQ**
